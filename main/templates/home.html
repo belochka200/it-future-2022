@@ -13,9 +13,15 @@
         <h1>Привет мир</h1>
         <div class="row">
             {% for post in posts %}
-            <div class="col-3">
-                Пост: {{ post.title }}
-            </div>
+            <div class="card col-4">
+                <div class="card-body">
+                  <h5 class="card-title">{{ post.title }}</h5>
+                  <p class="card-text">{{ post.content }}</p>
+                  <p class="card-text">likes: {{ post.likes }}</p>
+                  <a href="#" class="card-link">Card link</a>
+                  <a href="#" class="card-link">Another link</a>
+                </div>
+              </div>
             {% endfor %}  
         </div>
     </div>
