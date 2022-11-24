@@ -5,7 +5,6 @@ from django.contrib.auth.models import User
 
 def home(request):
     posts = Post.objects.all()
-    print(posts)
     data = {
         'posts': posts
     }
@@ -21,7 +20,10 @@ def test(request):
 
 def показать_пост(request, pk):
     пост = get_object_or_404(Post, pk=pk)
+    пост.views += 1
+    пост.save(update_fields=['views'])
     данные = {
-        'пост': пост
+        'пост': пост,
+        'просмотры': пост.views
     }
     return render(request, 'post_detail.html', данные)

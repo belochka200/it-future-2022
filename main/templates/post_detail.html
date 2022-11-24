@@ -1,6 +1,12 @@
 {% extends 'layout.html' %}
 {% block content %}
 <h1>{{ пост.title }}</h1>
-{{ пост.content }}
-Лайков: {{ пост.likes }}
+<p>
+    {{ пост.content }}
+</p>
+<div class="d-flex">
+    <p class="me-5">Лайков: {{ пост.likes }}</p>
+    <p class="mx-5">Просмотры: {{ пост.views }}</p>
+    <p class="ms-5">Категория: {{ пост.category }}</p>
+</div>
 {% endblock %}

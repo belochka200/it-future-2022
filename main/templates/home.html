@@ -9,6 +9,8 @@
                         <h5 class="card-title">{{ post.title }}</h5>
                         <p class="card-text">{{ post.content }}</p>
                         <p class="card-text">likes: {{ post.likes }}</p>
+                        <p class="card-text">Просмотры: {{ post.views }}</p>
+                        <p class="card-text">Категория: {{ post.category }}</p>
                         <a href="{% url 'show_post' post.pk %}" class="card-link">Show</a>
                         <!-- <a href="#" class="card-link">Another link</a> -->
                     </div>
