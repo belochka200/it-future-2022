@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sign up</title>
+    </head>
+    <body>
+        <form action="{% url 'reg' %}" method="post">
+            {% csrf_token %}
+            <input type='text' placeholder="Your username:" name='username'/>
+            <input type='text' placeholder="Your email:" name='email'/>
+            <input type='password' placeholder="Ваш пароль:" name='password'/>
+            <input type='password' placeholder="Повторите пароль:" name='repeat_password'/>
+            <input type='submit' value="Send"/>
+        </form>
+    </body>
+</html>
